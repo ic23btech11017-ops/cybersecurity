@@ -1,0 +1,14 @@
+[
+  { "id": "rsk-301", "title": "Legacy VPN gateway exposure", "assetId": "ast-001", "likelihood": 4, "impact": 5, "treatment": "Mitigate", "owner": "Infra Team" },
+  { "id": "rsk-317", "title": "Weak API auth flow", "assetId": "ast-002", "likelihood": 3, "impact": 5, "treatment": "Mitigate", "owner": "AppSec" },
+  { "id": "rsk-333", "title": "Endpoint EDR policy drift", "assetId": "ast-003", "likelihood": 3, "impact": 3, "treatment": "Transfer", "owner": "SOC Team" },
+  { "id": "rsk-340", "title": "Cloud storage ACL sprawl", "assetId": "ast-004", "likelihood": 5, "impact": 4, "treatment": "Avoid", "owner": "CloudOps" },
+  { "id": "rsk-352", "title": "Unpatched firmware on firewalls", "assetId": "ast-005", "likelihood": 4, "impact": 4, "treatment": "Mitigate", "owner": "NetOps" },
+  { "id": "rsk-364", "title": "Third-party vendor API key leak", "assetId": "ast-006", "likelihood": 2, "impact": 5, "treatment": "Accept", "owner": "AppSec" },
+  { "id": "rsk-378", "title": "Privileged account password rotation", "assetId": "ast-010", "likelihood": 3, "impact": 4, "treatment": "Mitigate", "owner": "OT Security" },
+  { "id": "rsk-385", "title": "Container image vulnerability backlog", "assetId": "ast-013", "likelihood": 4, "impact": 3, "treatment": "Mitigate", "owner": "SRE Team" },
+  { "id": "rsk-391", "title": "Data residency non-compliance", "assetId": "ast-009", "likelihood": 2, "impact": 4, "treatment": "Transfer", "owner": "CloudOps" },
+  { "id": "rsk-403", "title": "Insider threat — excessive access", "assetId": "ast-011", "likelihood": 3, "impact": 5, "treatment": "Mitigate", "owner": "SOC Team" },
+  { "id": "rsk-415", "title": "SCADA protocol plain-text comms", "assetId": "ast-010", "likelihood": 5, "impact": 5, "treatment": "Avoid", "owner": "OT Security" },
+  { "id": "rsk-427", "title": "Outdated TLS on public endpoints", "assetId": "ast-007", "likelihood": 2, "impact": 3, "treatment": "Mitigate", "owner": "DevOps" }
+]

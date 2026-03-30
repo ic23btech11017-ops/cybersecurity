@@ -1,0 +1,12 @@
+{
+  "name": "cyber-security-workspace",
+  "private": true,
+  "scripts": {
+    "dev": "npm --prefix ./cyberops360-frontend run dev",
+    "build": "npm --prefix ./cyberops360-frontend run build",
+    "lint": "npm --prefix ./cyberops360-frontend run lint",
+    "test": "npm --prefix ./cyberops360-frontend run test",
+    "test:run": "npm --prefix ./cyberops360-frontend run test:run",
+    "install:app": "npm --prefix ./cyberops360-frontend install"
+  }
+}

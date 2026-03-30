@@ -1,0 +1,14 @@
+[
+  { "id": "cli-001", "name": "NorthGrid Bank", "industry": "Finance", "activeIncidents": 4, "slaStatus": "Watch" },
+  { "id": "cli-002", "name": "Helio MedTech", "industry": "Healthcare", "activeIncidents": 2, "slaStatus": "Healthy" },
+  { "id": "cli-003", "name": "Portline Energy", "industry": "Energy", "activeIncidents": 5, "slaStatus": "Breach" },
+  { "id": "cli-004", "name": "Axion Technologies", "industry": "Technology", "activeIncidents": 1, "slaStatus": "Healthy" },
+  { "id": "cli-005", "name": "SteelForge Manufacturing", "industry": "Manufacturing", "activeIncidents": 3, "slaStatus": "Watch" },
+  { "id": "cli-006", "name": "CrownRetail Group", "industry": "Retail", "activeIncidents": 0, "slaStatus": "Healthy" },
+  { "id": "cli-007", "name": "Meridian Logistics", "industry": "Technology", "activeIncidents": 6, "slaStatus": "Breach" },
+  { "id": "cli-008", "name": "Prism Pharma Ltd", "industry": "Healthcare", "activeIncidents": 2, "slaStatus": "Healthy" },
+  { "id": "cli-009", "name": "AquaFlow Utilities", "industry": "Energy", "activeIncidents": 1, "slaStatus": "Watch" },
+  { "id": "cli-010", "name": "Nexus Financial Services", "industry": "Finance", "activeIncidents": 3, "slaStatus": "Watch" },
+  { "id": "cli-011", "name": "Vanguard Defense", "industry": "Manufacturing", "activeIncidents": 0, "slaStatus": "Healthy" },
+  { "id": "cli-012", "name": "TerraCloud Solutions", "industry": "Technology", "activeIncidents": 4, "slaStatus": "Breach" }
+]

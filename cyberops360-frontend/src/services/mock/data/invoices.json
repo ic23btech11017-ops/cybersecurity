@@ -1,0 +1,14 @@
+[
+  { "id": "inv-2201", "clientId": "cli-001", "plan": "Retainer", "amountUsd": 18000, "status": "Sent" },
+  { "id": "inv-2202", "clientId": "cli-002", "plan": "Usage", "amountUsd": 9600, "status": "Draft" },
+  { "id": "inv-2203", "clientId": "cli-003", "plan": "Retainer", "amountUsd": 24000, "status": "Paid" },
+  { "id": "inv-2204", "clientId": "cli-004", "plan": "Retainer", "amountUsd": 15500, "status": "Paid" },
+  { "id": "inv-2205", "clientId": "cli-005", "plan": "Usage", "amountUsd": 12200, "status": "Sent" },
+  { "id": "inv-2206", "clientId": "cli-006", "plan": "Retainer", "amountUsd": 8400, "status": "Paid" },
+  { "id": "inv-2207", "clientId": "cli-007", "plan": "Usage", "amountUsd": 21800, "status": "Sent" },
+  { "id": "inv-2208", "clientId": "cli-008", "plan": "Retainer", "amountUsd": 11000, "status": "Draft" },
+  { "id": "inv-2209", "clientId": "cli-009", "plan": "Usage", "amountUsd": 6750, "status": "Paid" },
+  { "id": "inv-2210", "clientId": "cli-010", "plan": "Retainer", "amountUsd": 19500, "status": "Sent" },
+  { "id": "inv-2211", "clientId": "cli-011", "plan": "Retainer", "amountUsd": 28000, "status": "Paid" },
+  { "id": "inv-2212", "clientId": "cli-012", "plan": "Usage", "amountUsd": 16300, "status": "Draft" }
+]
