@@ -113,7 +113,7 @@ export const IncidentDetailsPage = () => {
           <Stack direction="row" spacing={3} alignItems="center">
             <Box 
               sx={{ 
-                flex: 1, 
+                width: 72, 
                 height: 72, 
                 borderRadius: 2,
                 display: 'flex',
@@ -252,7 +252,7 @@ function DetailRow({ icon, label, value, valueColor, valueWeight }: any) {
     <Box sx={{ display: 'flex', alignItems: 'center', p: 2 }}>
       <Box sx={{ 
         display: 'flex', alignItems: 'center', justifyContent: 'center', 
-        flex: 1, height: 32, borderRadius: 1.5, 
+        width: 32, height: 32, borderRadius: 1.5, 
         bgcolor: (theme) => alpha(theme.palette.mode === 'dark' ? '#fff' : '#000', 0.05),
         color: 'text.secondary',
         mr: 2,

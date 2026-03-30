@@ -165,7 +165,7 @@ export const ClientDetailsPage = () => {
           <Stack direction="row" spacing={3} alignItems="center">
             <Avatar 
               sx={{ 
-                flex: 1, 
+                width: 72, 
                 height: 72, 
                 bgcolor: 'primary.main', 
                 fontSize: '1.75rem', 
@@ -314,7 +314,7 @@ function DetailRow({ icon, label, value, valueColor, valueWeight }: any) {
     <Box sx={{ display: 'flex', alignItems: 'center', p: 2 }}>
       <Box sx={{ 
         display: 'flex', alignItems: 'center', justifyContent: 'center', 
-        flex: 1, height: 32, borderRadius: 1.5, 
+        width: 32, height: 32, borderRadius: 1.5, 
         bgcolor: (theme) => alpha(theme.palette.mode === 'dark' ? '#fff' : '#000', 0.05),
         color: 'text.secondary',
         mr: 2,
