@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+import { useState } from 'react'
 import {
   Dashboard,
   GppGood,
@@ -118,17 +118,17 @@ export const AppShell = ({
   const theme = useTheme()
   const navigate = useNavigate()
 
-  const allItems = useMemo(() => {
-    const items: { label: string; path: string }[] = []
-    navEntries.forEach((entry) => {
-      if (isGroup(entry)) {
-        entry.children.forEach((child) => items.push(child))
-      } else {
-        items.push(entry)
-      }
-    })
-    return items
-  }, [])
+  // const allItems = useMemo(() => {
+  //   const items: { label: string; path: string }[] = []
+  //   navEntries.forEach((entry) => {
+  //     if (isGroup(entry)) {
+  //       entry.children.forEach((child) => items.push(child))
+  //     } else {
+  //       items.push(entry)
+  //     }
+  //   })
+  //   return items
+  // }, [])
 
   const initials = role
     .split('_')

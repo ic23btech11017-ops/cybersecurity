@@ -1,6 +1,5 @@
 import { useEffect, useMemo, useState } from 'react'
 import {
-  Box,
   Button,
   Chip,
   Grid,
@@ -8,7 +7,6 @@ import {
   Paper,
   Stack,
   TextField,
-  Typography,
 } from '@mui/material'
 import { Add as AddIcon } from '@mui/icons-material'
 import { DataGrid, type GridColDef } from '@mui/x-data-grid'
@@ -227,11 +225,11 @@ export const ClientsPage = () => {
   )
 }
 
-const DetailRow = ({ label, value }: { label: string; value: string }) => (
-  <Box>
-    <Typography variant="caption" sx={{ color: 'text.secondary', textTransform: 'uppercase', letterSpacing: 0.5, fontSize: '0.7rem' }}>
-      {label}
-    </Typography>
-    <Typography variant="body1" sx={{ fontWeight: 500 }}>{value}</Typography>
-  </Box>
-)
+// const DetailRow = ({ label, value }: { label: string; value: string }) => (
+//   <Box>
+//     <Typography variant="caption" sx={{ color: 'text.secondary', textTransform: 'uppercase', letterSpacing: 0.5, fontSize: '0.7rem' }}>
+//       {label}
+//     </Typography>
+//     <Typography variant="body1" sx={{ fontWeight: 500 }}>{value}</Typography>
+//   </Box>
+// )

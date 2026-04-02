@@ -15,7 +15,7 @@ import {
   TextField,
   Typography,
 } from '@mui/material'
-import { Add as AddIcon, Upload as UploadIcon, Summarize as ReportIcon } from '@mui/icons-material'
+import { Upload as UploadIcon, Summarize as ReportIcon } from '@mui/icons-material'
 import { DataGrid, type GridColDef } from '@mui/x-data-grid'
 import {
   Area,

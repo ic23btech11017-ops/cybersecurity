@@ -9,7 +9,7 @@ export const getCfmsTheme = (mode: 'light' | 'dark') => {
   const bgDefault = isDark ? '#07101a' : '#f4f7fa'
   const bgPaper = isDark ? '#0f1d2e' : '#ffffff'
   const borderColor = isDark ? 'rgba(255,255,255,0.08)' : 'rgba(0,0,0,0.08)'
-  const headerBg = isDark ? 'rgba(255,255,255,0.04)' : 'rgba(0,0,0,0.03)'
+  // const headerBg = isDark ? 'rgba(255,255,255,0.04)' : 'rgba(0,0,0,0.03)'
   const hoverBg = isDark ? 'rgba(41,182,246,0.08)' : 'rgba(2,119,189,0.04)'
   const textPrimary = isDark ? '#e4edf5' : '#1a2332'
   const textSecondary = isDark ? 'rgba(228,237,245,0.65)' : 'rgba(26,35,50,0.6)'
@@ -204,59 +204,59 @@ export const getCfmsTheme = (mode: 'light' | 'dark') => {
       },
 
       /* ── DataGrid ──────────────────────────────────── */
-      MuiDataGrid: {
-        styleOverrides: {
-          root: {
-            border: 'none',
-            fontSize: '0.875rem',
-            '& .MuiDataGrid-withBorderColor': {
-              borderColor,
-            },
-          },
-          columnHeaders: {
-            backgroundColor: headerBg,
-            borderBottom: `1px solid ${borderColor}`,
-          },
-          columnHeader: {
-            fontWeight: 700,
-            fontSize: '0.75rem',
-            textTransform: 'uppercase' as const,
-            letterSpacing: '0.05em',
-            color: textSecondary,
-            '&:focus, &:focus-within': {
-              outline: 'none',
-            },
-          },
-          columnSeparator: {
-            display: 'none',
-          },
-          row: {
-            transition: 'background-color 0.15s ease',
-            '&:hover': {
-              backgroundColor: hoverBg,
-            },
-            '&.Mui-selected': {
-              backgroundColor: alpha(primary, 0.1),
-              '&:hover': {
-                backgroundColor: alpha(primary, 0.15),
-              },
-            },
-          },
-          cell: {
-            borderBottom: `1px solid ${borderColor}`,
-            '&:focus, &:focus-within': {
-              outline: 'none',
-            },
-          },
-          footerContainer: {
-            borderTop: `1px solid ${borderColor}`,
-            backgroundColor: headerBg,
-          },
-          overlay: {
-            backgroundColor: alpha(bgPaper, 0.8),
-          },
-        },
-      },
+      // MuiDataGrid: {
+      //   styleOverrides: {
+      //     root: {
+      //       border: 'none',
+      //       fontSize: '0.875rem',
+      //       '& .MuiDataGrid-withBorderColor': {
+      //         borderColor,
+      //       },
+      //     },
+      //     columnHeaders: {
+      //       backgroundColor: headerBg,
+      //       borderBottom: `1px solid ${borderColor}`,
+      //     },
+      //     columnHeader: {
+      //       fontWeight: 700,
+      //       fontSize: '0.75rem',
+      //       textTransform: 'uppercase' as const,
+      //       letterSpacing: '0.05em',
+      //       color: textSecondary,
+      //       '&:focus, &:focus-within': {
+      //         outline: 'none',
+      //       },
+      //     },
+      //     columnSeparator: {
+      //       display: 'none',
+      //     },
+      //     row: {
+      //       transition: 'background-color 0.15s ease',
+      //       '&:hover': {
+      //         backgroundColor: hoverBg,
+      //       },
+      //       '&.Mui-selected': {
+      //         backgroundColor: alpha(primary, 0.1),
+      //         '&:hover': {
+      //           backgroundColor: alpha(primary, 0.15),
+      //         },
+      //       },
+      //     },
+      //     cell: {
+      //       borderBottom: `1px solid ${borderColor}`,
+      //       '&:focus, &:focus-within': {
+      //         outline: 'none',
+      //       },
+      //     },
+      //     footerContainer: {
+      //       borderTop: `1px solid ${borderColor}`,
+      //       backgroundColor: headerBg,
+      //     },
+      //     overlay: {
+      //       backgroundColor: alpha(bgPaper, 0.8),
+      //     },
+      //   },
+      // },
 
       /* ── Switch (dark/light toggle) ────────────────── */
       MuiSwitch: {
