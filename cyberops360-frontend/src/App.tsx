@@ -1,25 +1,31 @@
-import { useMemo, useState } from 'react'
-import { CssBaseline, ThemeProvider } from '@mui/material'
+import { lazy, Suspense, useMemo, useState } from 'react'
+import { Box, CircularProgress, CssBaseline, ThemeProvider } from '@mui/material'
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
 import { AuthProvider } from './auth/AuthContext'
 import { AppShell } from './components/AppShell'
 import { ProtectedRoute } from './components/ProtectedRoute'
-import { SnackbarProvider } from './components/SnackbarProvider'
 import { getCfmsTheme } from './theme/cfmsTheme'
 
-import { LoginPage } from './pages/LoginPage'
-import { TwoFactorPage } from './pages/TwoFactorPage'
-import { DashboardPage } from './pages/DashboardPage'
-import { ClientsPage } from './pages/ClientsPage'
-import { AssetsPage } from './pages/AssetsPage'
-import { RisksPage } from './pages/RisksPage'
-import { IncidentsPage } from './pages/IncidentsPage'
-import { CompliancePage } from './pages/CompliancePage'
-import { BillingPage } from './pages/BillingPage'
-import { SocQueuePage, EvidencePage, ReportsPage, SlaPage, SettingsPage } from './pages/SupportPages'
-import { ProfilePage } from './pages/ProfilePage'
-import { ClientDetailsPage } from './pages/ClientDetailsPage'
-import { IncidentDetailsPage } from './pages/IncidentDetailsPage'
+const LoginPage = lazy(() => import('./pages/LoginPage').then((mod) => ({ default: mod.LoginPage })))
+const TwoFactorPage = lazy(() => import('./pages/TwoFactorPage').then((mod) => ({ default: mod.TwoFactorPage })))
+const DashboardPage = lazy(() => import('./pages/DashboardPage').then((mod) => ({ default: mod.DashboardPage })))
+const ClientsPage = lazy(() => import('./pages/ClientsPage').then((mod) => ({ default: mod.ClientsPage })))
+const AssetsPage = lazy(() => import('./pages/AssetsPage').then((mod) => ({ default: mod.AssetsPage })))
+const RisksPage = lazy(() => import('./pages/RisksPage').then((mod) => ({ default: mod.RisksPage })))
+const IncidentsPage = lazy(() => import('./pages/IncidentsPage').then((mod) => ({ default: mod.IncidentsPage })))
+const CompliancePage = lazy(() => import('./pages/CompliancePage').then((mod) => ({ default: mod.CompliancePage })))
+const BillingPage = lazy(() => import('./pages/BillingPage').then((mod) => ({ default: mod.BillingPage })))
+const SocQueuePage = lazy(() => import('./pages/SupportPages').then((mod) => ({ default: mod.SocQueuePage })))
+const EvidencePage = lazy(() => import('./pages/SupportPages').then((mod) => ({ default: mod.EvidencePage })))
+const ReportsPage = lazy(() => import('./pages/SupportPages').then((mod) => ({ default: mod.ReportsPage })))
+const SlaPage = lazy(() => import('./pages/SupportPages').then((mod) => ({ default: mod.SlaPage })))
+const SettingsPage = lazy(() => import('./pages/SupportPages').then((mod) => ({ default: mod.SettingsPage })))
+
+const RouteFallback = () => (
+  <Box sx={{ minHeight: '100vh', display: 'grid', placeItems: 'center' }}>
+    <CircularProgress />
+  </Box>
+)
 
 const App = () => {
   const [mode, setMode] = useState<'light' | 'dark'>('dark')
@@ -28,9 +34,9 @@ const App = () => {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <SnackbarProvider>
-        <AuthProvider>
-          <BrowserRouter>
+      <AuthProvider>
+        <BrowserRouter>
+          <Suspense fallback={<RouteFallback />}>
             <Routes>
               <Route path="/login" element={<LoginPage />} />
               <Route path="/2fa" element={<TwoFactorPage />} />
@@ -41,11 +47,9 @@ const App = () => {
                 >
                   <Route path="/dashboard" element={<DashboardPage />} />
                   <Route path="/clients" element={<ClientsPage />} />
-                  <Route path="/clients/:id" element={<ClientDetailsPage />} />
                   <Route path="/assets" element={<AssetsPage />} />
                   <Route path="/risks" element={<RisksPage />} />
                   <Route path="/incidents" element={<IncidentsPage />} />
-                  <Route path="/incidents/:id" element={<IncidentDetailsPage />} />
                   <Route path="/soc-queue" element={<SocQueuePage />} />
                   <Route path="/compliance" element={<CompliancePage />} />
                   <Route path="/evidence" element={<EvidencePage />} />
@@ -57,16 +61,15 @@ const App = () => {
                   </Route>
 
                   <Route path="/settings" element={<SettingsPage />} />
-                  <Route path="/profile" element={<ProfilePage />} />
                   <Route path="*" element={<Navigate to="/dashboard" replace />} />
                 </Route>
               </Route>
 
               <Route path="*" element={<Navigate to="/login" replace />} />
             </Routes>
-          </BrowserRouter>
-        </AuthProvider>
-      </SnackbarProvider>
+          </Suspense>
+        </BrowserRouter>
+      </AuthProvider>
     </ThemeProvider>
   )
 }
